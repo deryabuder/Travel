@@ -7,9 +7,10 @@ import router from './router'
 // 这是为了检查用户是否在做双击。为了能够立即响应用户的点击事件，才有了FastClick。
 import fastClick from 'fastclick'
 // css重设让所有浏览器都按照同样的规则解释CSS，这样就能避免发生这种问题。
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 不同的手机又不同的像素密度，css中的1px并不等于移动设备中的1px
-// import './assets/styles/border.css'
+import 'styles/border.css'
+import 'styles/iconfont.css'
 
 // 设置为 false 以阻止 vue 在启动时生成生产提示。
 Vue.config.productionTip = false
