@@ -11,6 +11,10 @@ import 'styles/reset.css'
 // 不同的手机又不同的像素密度，css中的1px并不等于移动设备中的1px
 import 'styles/border.css'
 import 'styles/iconfont.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 
 // 设置为 false 以阻止 vue 在启动时生成生产提示。
 Vue.config.productionTip = false
