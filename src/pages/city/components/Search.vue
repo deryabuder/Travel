@@ -19,6 +19,7 @@ export default {
   padding: 0 0.1rem;
 
   .search-input {
+    box-sizing: border-box;
     width: 100%;
     height: 0.62rem;
     line-height: 0.62rem;
