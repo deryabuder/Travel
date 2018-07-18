@@ -29,12 +29,13 @@ export default {
       city: '',
       swiperList: [],
       iconList: [],
-      recommendList: []
+      recommendList: [],
+      weekendList: []
     }
   },
   methods: {
     getHomeInfo () {
-      axios.get('/api/index.json')
+      axios.get('/static/data/index.json')
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {

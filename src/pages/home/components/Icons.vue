@@ -1,6 +1,6 @@
 <template>
 <div class="icons">
-  <swiper>
+  <swiper :options="swiperOption" v-if='showSwip'>
     <swiper-slide v-for='(page, index) of pages' :key='index'>
     <div class='icon' v-for='item of page' :key='item.id'>
       <div class='icon-img'>
@@ -19,6 +19,13 @@ export default {
   props: {
     list: Array
   },
+  data () {
+    return {
+      swiperOption: {
+        autoplay: false
+      }
+    }
+  },
   computed: {
     pages () {
       const pages = []
@@ -30,6 +37,9 @@ export default {
         pages[page].push(item)
       })
       return pages
+    },
+    showSwip () {
+      return this.list.length
     }
   }
 }

@@ -10,14 +10,7 @@ module.exports = {
     // Paths webpack-dev-server
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
-      '/api': {
-        target: 'http://loacalhost:8081',
-        pathRewrite: {
-          '^/api': '/static/data'
-        }
-      }
-    },
+    proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
