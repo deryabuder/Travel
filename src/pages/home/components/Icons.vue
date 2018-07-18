@@ -90,7 +90,7 @@ export default {
 @import '~styles/varibles.styl';
 @import '~styles/mixins.styl';
 
-.icons {
+.icons >>> .swiper-container {
   height: 0;
   padding-bottom: 50%;
 }
