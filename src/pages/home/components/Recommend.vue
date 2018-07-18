@@ -3,7 +3,7 @@
     <div class='title'>热销推荐</div>
     <ul>
       <!-- 添加一像素边框 -->
-      <li class='item border-bottom' v-for='item of recommendList' :key='item.id'>
+      <li class='item border-bottom' v-for='item of list' :key='item.id'>
         <img class='item-img' :src='item.imgUrl'/>
         <div class='item-info'>
           <p class='item-title'>{{item.title}}</p>
@@ -18,21 +18,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/be/c788f0f3767d2ea037b9b66d2010bfa4.water.jpg_150x150_a980923f.jpg',
-        title: '宋城千古情',
-        desc: '2017年秋，杭州宋城景区的时光机发生故障。'
-      },
-      {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1412/be/c788f0f3767d2ea037b9b66d2010bfa4.water.jpg_150x150_a980923f.jpg',
-        title: '宋城千古情',
-        desc: '2017年秋，杭州宋城景区的时光机发生故障。'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
