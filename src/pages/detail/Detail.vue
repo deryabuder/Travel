@@ -14,6 +14,7 @@ import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import axios from 'axios'
 export default {
+  // 用途： 递归组件 取消缓存
   name: 'Detail',
   components: {
     DetailBanner,

@@ -11,12 +11,16 @@
         </div>
       </div>
     </div>
-    <common-gallery :imgs='gallery' v-show='showGallery' @close='handleGalleryClose'></common-gallery>
+    <fade-animation>
+      <!-- 对应的是<slot></slot>,外部的动画效果会作用在这里 -->
+      <common-gallery :imgs='gallery' v-show='showGallery' @close='handleGalleryClose'></common-gallery>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallery from 'common/gallery/Gallery'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
   data () {
@@ -38,7 +42,8 @@ export default {
     }
   },
   components: {
-    CommonGallery
+    CommonGallery,
+    FadeAnimation
   }
 }
 </script>
