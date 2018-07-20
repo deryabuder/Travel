@@ -7,6 +7,8 @@ import router from './router'
 // 这是为了检查用户是否在做双击。为了能够立即响应用户的点击事件，才有了FastClick。
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+// 为了解决部分手机不支持promise的问题
+import 'babel-polyfill'
 import store from './store'
 // css重设让所有浏览器都按照同样的规则解释CSS，这样就能避免发生这种问题。
 import 'styles/reset.css'

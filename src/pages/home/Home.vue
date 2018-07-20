@@ -18,6 +18,8 @@ import axios from 'axios'
 export default {
   name: 'Home',
   components: {
+    // 异步组件实现按需加载（在父组件中）
+    // HomeHeader: () => import('./components/Header'),
     HomeHeader,
     HomeSwiper,
     HomeIcons,

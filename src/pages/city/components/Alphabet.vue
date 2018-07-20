@@ -1,8 +1,9 @@
 <template>
   <ul class='list'>
+    <!-- 阻止touchstart的默认行为 -->
     <li class='item' v-for='item of letters' :key='item' :ref='item'
     @click='handleletterClick'
-    @touchstart='handleTouchStart'
+    @touchstart.prevent='handleTouchStart'
     @touchmove='handleTouchMove'
     @touchend='handleTouchEnd'
     >{{item}}</li>
