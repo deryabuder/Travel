@@ -39,6 +39,7 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
+  // 对全局事件的解绑
   unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }
@@ -66,6 +67,7 @@ export default {
 }
 
 .header-fixed {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
