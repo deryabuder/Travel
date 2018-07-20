@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class='banner' @click='hanleBannerClick'>
-      <img class='banner-img' src='http://img1.qunarzz.com/sight/p0/1503/55/5577ab22b2e205d0.water.jpg_600x330_2a541cbf.jpg'/>
+      <img class='banner-img' :src='banner'/>
       <div class='banner-info'>
-        <div class='banner-title'>大连海洋世界</div>
+        <div class='banner-title'>{{title}}</div>
         <div class='banner-number'>
           <span class='iconfont banner-icon'>&#xe692;
           </span>
@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <common-gallery :imgs='imgs' v-show='showGallery' @close='handleGalleryClose'></common-gallery>
+    <common-gallery :imgs='gallery' v-show='showGallery' @close='handleGalleryClose'></common-gallery>
   </div>
 </template>
 
@@ -21,10 +21,13 @@ export default {
   name: 'DetailBanner',
   data () {
     return {
-      showGallery: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/1503/fe/fe5c99cd2e6f7595.water.jpg_350x240_7825760a.jpg',
-        'http://img1.qunarzz.com/sight/p21/201211/05/39e583422d2dd02c93835fbb.jpg_350x240_98acf37c.jpg']
+      showGallery: false
     }
+  },
+  props: {
+    title: String,
+    banner: String,
+    gallery: Array
   },
   methods: {
     hanleBannerClick () {
