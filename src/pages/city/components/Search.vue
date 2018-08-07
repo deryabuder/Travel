@@ -31,6 +31,7 @@ export default {
     }
   },
   methods: {
+    // 点击搜索结果中的城市，可以改变state和localStorage中的城市，并跳转到首页
     handleCityClick (city) {
       // 省略掉action这一步
       // this.$store.dispatch('changeCity', city)
@@ -39,6 +40,7 @@ export default {
     }
   },
   watch: {
+    // 监听keyword的变化，防抖，只有当用户不再改变输入时，才会获取结果
     keyword () {
       if (this.timer) {
         clearTimeout(this.timer)
@@ -47,6 +49,7 @@ export default {
         this.list = []
         return
       }
+      // 获取匹配结果，保存在this.list数组中
       this.timer = setTimeout(() => {
         const result = []
         for (let i in this.cities) {
@@ -64,6 +67,7 @@ export default {
     this.scroll = new Bscroll(this.$refs.search)
   },
   computed: {
+    // 计算属性，判断是否有匹配数据
     hasNoData () {
       return !this.list.length
     }

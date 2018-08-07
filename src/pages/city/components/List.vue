@@ -18,7 +18,7 @@
           </div>
       </div>
       <div class='area' v-for='(item, key) of cities' :key='key' :ref='key'>
-        <div class='title border-topbottom'>{{key}}</div>
+        <div class='title'>{{key}}</div>
           <div class='item-list'>
             <div class='item border-bottom' v-for='innerItem of item' :key='innerItem.id' @click='handleCityClick(innerItem.name)'>{{innerItem.name}}</div>
           </div>
@@ -46,6 +46,8 @@ export default {
     }
   },
   watch: {
+    // 当滚动字母表时，字母表子组件会将事件和滚动到的letter发送给父组件，父组件发送给
+    // 当前组件，当前组件进行滚动
     letter () {
       if (this.letter) {
         const element = this.$refs[this.letter][0]
@@ -61,22 +63,6 @@ export default {
 
 <style lang='stylus' scoped>
 @import '~styles/varibles.styl';
-
-.border-topbottom {
-  &:before {
-    border-color: #ccc;
-  }
-
-  &:after {
-    border-color: #ccc;
-  }
-}
-
-.border-bottom {
-  &:before {
-    border-color: #ccc;
-  }
-}
 
 .list {
   overflow: hidden;
@@ -95,6 +81,7 @@ export default {
 
   .button-list {
     padding: 0.1rem 0.6rem 0.1rem 0.1rem;
+    // 清除浮动带来的父元素高度塌陷
     overflow: hidden;
 
     .button-wrapper {

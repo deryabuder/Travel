@@ -34,6 +34,7 @@ export default {
   display: inline-block;
   width: 0.36rem;
   height: 0.36rem;
+  // 背景图需向上移动才能显示指定图标，因而是负值
   background: url('http://s.qunarzz.com/piao/image/touch/sight/detail.png') 0 -0.45rem no-repeat; // s.qunarzz.com/piao/image/touch/sight/detail.png) 0 -.45rem no-repeat;
   margin-right: 0.1rem;
   background-size: 0.4rem 3rem;

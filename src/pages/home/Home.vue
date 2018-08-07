@@ -36,6 +36,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
+      // axios.get()返回一个promise，promise调用then，then中是完成处理函数
       axios.get('/static/data/index.json')
         .then(this.getHomeInfoSucc)
     },

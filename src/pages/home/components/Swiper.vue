@@ -44,6 +44,7 @@ export default {
 .wrapper {
   overflow: hidden;
   width: 100%;
+  // 预设高度的方法，防止图片没加载是，dom没留图片的高度
   height: 0;
   // 高度相对于宽度自动撑开31.15%
   padding-bottom: 31.25%;

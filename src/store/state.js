@@ -6,6 +6,7 @@ try {
   }
 } catch (e) {}
 
+// 导出一个对象作为默认值
 export default {
   city: defaultCity
 }

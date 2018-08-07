@@ -5,7 +5,7 @@
     <!-- include: 字符串或正则表达式。只有匹配的组件会被缓存。
     exclude: 字符串或正则表达式。任何匹配的组件都不会被缓存。 -->
     <keep-alive exclude="Detail">
-      <router-view/>
+    <router-view></router-view>
     </keep-alive>
   </div>
 </template>

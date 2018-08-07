@@ -28,6 +28,7 @@ export default {
   },
   computed: {
     pages () {
+      // 相当于一个二维数组
       const pages = []
       this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
@@ -61,6 +62,7 @@ export default {
     position: relative;
     overflow: hidden;
     float: left;
+    // 设置宽高，浮动在左侧
     width: 25%;
     height: 0;
     padding-bottom: 25%;
@@ -70,11 +72,13 @@ export default {
       top: 0;
       left: 0;
       right: 0;
+      // 到底部的距离，留给文字描述空间
       bottom: 0.44rem;
       box-sizing: border-box;
       padding: 0.1rem;
 
       .icon-img-content {
+        // 内联元素设置成块状，才能设置宽高，居中，高度百分百
         display: block;
         margin: 0 auto;
         height: 100%;

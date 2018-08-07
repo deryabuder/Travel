@@ -34,6 +34,7 @@ export default {
   },
   updated () {
     // offsetTop A到搜索框下边框的距离
+    // offsetTop：获取对象相对于由offsetParent属性指定的父坐标(css定位的元素或body元素)距离顶端的高度。
     this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
@@ -51,6 +52,7 @@ export default {
         }
         this.timer = setTimeout(() => {
           // 手指距离搜索框下边框的距离，cliendY距离顶部的高度
+          // 79是顶部加搜索框的高度
           const touchY = e.touches[0].clientY - 79
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.letters.length) {

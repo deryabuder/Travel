@@ -1,8 +1,10 @@
 <template>
   <div class='header'>
+    <!-- 返回图标 -->
     <div class='header-left'>
       <div class='iconfont back-icon'>&#xe624;</div>
     </div>
+    <!-- 输入 -->
     <div class='header-input'>
       <span class='iconfont'>&#xe632;</span>
       输入城市/景点/游玩主题

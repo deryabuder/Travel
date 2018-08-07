@@ -27,11 +27,13 @@ export default {
   font-size: 0.32rem;
 
   .header-back {
+    // 脱离文档流
     position: absolute;
     top: 0;
     left: 0;
     width: 0.64rem;
     text-align: center;
+    // 图标可以设置大小和颜色
     font-size: 0.4rem;
     color: #fff;
   }

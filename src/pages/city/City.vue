@@ -41,6 +41,7 @@ export default {
         this.hotCities = data.hotCities
       }
     },
+    // 当移动字母表时
     handleLetterChange (letter) {
       this.letter = letter
     }

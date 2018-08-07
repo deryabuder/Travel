@@ -37,11 +37,13 @@ export default {
   margin-top: 0.2rem;
   line-height: 0.8rem;
   background: #eee;
+  // 文本块中首行文本的缩进
   text-indent: 0.2rem;
 }
 
 .item {
   overflow: hidden;
+  // 水平flex布局
   display: flex;
   height: 1.9rem;
 

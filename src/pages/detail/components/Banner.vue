@@ -67,6 +67,7 @@ export default {
     bottom: 0;
     line-height: 0.6rem;
     color: #fff;
+    // 从上往下的从白色编黑色的效果
     background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 
     .banner-title {
